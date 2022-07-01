@@ -35,6 +35,18 @@ function draw() {
 
     song_name = peter_pan_song.isPlaying();
     console.log(song_name);
+
+    if(scoreleftWrist > 0.2){
+        circle(leftWristX,leftWristY,20);
+        peter_pan_song.stop();
+        if(song_name == false){
+            harry_potter_theme_song.play();
+        }
+        else{
+            console.log("Song Name: Peter Pan Song");
+            document.getElementById("song_id").innerHTML = "Song Name: Peter Pan Song";
+        }
+    }
 }
 
 function gotPoses(results) {
